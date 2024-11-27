@@ -30,9 +30,11 @@ public final class FfmpegVideoRenderer extends DecoderVideoRenderer {
     private static final int DEFAULT_NUM_OF_INPUT_BUFFERS = 4;
     private static final int DEFAULT_NUM_OF_OUTPUT_BUFFERS = 4;
     /* Default size based on 720p resolution video compressed by a factor of two. */
+    /*private static final int DEFAULT_INPUT_BUFFER_SIZE =
+            Util.ceilDivide(1280, 64) * Util.ceilDivide(720, 64) * (64 * 64 * 3 / 2) / 2;*/
+    // change FO
     private static final int DEFAULT_INPUT_BUFFER_SIZE =
-            Util.ceilDivide(1280, 64) * Util.ceilDivide(720, 64) * (64 * 64 * 3 / 2) / 2;
-
+            Util.ceilDivide(1920, 64) * Util.ceilDivide(1080, 64) * (64 * 64 * 3 / 2) / 2;
     /** The number of input buffers. */
     private final int numInputBuffers;
     /**
