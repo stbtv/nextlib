@@ -84,7 +84,7 @@ open class NextRenderersFactory(context: Context) : DefaultRenderersFactory(cont
         try {
             val renderer = FfmpegVideoRenderer(allowedVideoJoiningTimeMs, eventHandler, eventListener, MAX_DROPPED_VIDEO_FRAME_COUNT_TO_NOTIFY)
             out.add(extensionRendererIndex++, renderer)
-            Log.i(TAG, "Loaded FfmpegVideoRenderer.")
+            Log.i(TAG, "Loaded FfmpegVideoRenderer.!!")
         } catch (e: java.lang.Exception) {
             // The extension is present, but instantiation failed.
             throw java.lang.RuntimeException("Error instantiating Ffmpeg extension", e)
